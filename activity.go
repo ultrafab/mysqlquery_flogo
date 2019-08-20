@@ -50,8 +50,9 @@ func (a *MyActivity) Eval(context activity.Context) (done bool, err error)  {
 		b := query[i+13:j]
 		c := query[j+15:]
 		for k, v := range dat {
+			ss := fmt.Sprintf("%f", v)
 				a = a +k+","
-				b = b +fmt.Sprintf("%f", v)+","
+				b = b +ss+","
 		}
 		a = a[:len(a)-1]
 		b = b[:len(b)-1]
