@@ -7,15 +7,31 @@
   "description": "This activity let you to query a MySQL DB",
   "homepage": "https://github.com/ultrafab/mysqlquery_flogo",
   "inputs":[
-    {
+      {
           "name": "message",
           "type": "string"
-        }
-      ],
-      "outputs": [
-        {
-          "name": "result",
-          "type": "boolean"
-        }
-      ]
-    }
+      },
+      {
+          "name": "db",
+          "type": "string"
+      },
+      {
+          "name": "username",
+          "type": "string"
+      },
+      {
+          "name": "password",
+          "type": "string"
+      },
+      {
+          "name": "query",
+          "type": "string"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "type": "boolean"
+      }
+    ]
+  }

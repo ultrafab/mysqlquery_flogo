@@ -49,9 +49,14 @@ func TestEval(t *testing.T) {
 	tc := test.NewTestActivityContext(getActivityMetadata())
 
 	m := make(map[string]interface{})
-	m["pressionePerdita"] = 5
+	m["pressione_perdita"] = "51.6"
+	m["pressione_ingresso"] = "5.1"
 	data, _ := json.Marshal(m)
 	tc.SetInput("message", string(data))
+	tc.SetInput("username", "ukeau")
+	tc.SetInput("password", "kaplan")
+	tc.SetInput("query", "INSERT INTO data (date, $MESSAGE_KEYS) VALUES (UTC_TIMESTAMP(),$MESSAGE_VALUES)")
+	tc.SetInput("db", "rub")
 	act.Eval(tc)
 
 	value := tc.GetOutput("result")
