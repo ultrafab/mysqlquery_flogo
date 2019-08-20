@@ -1,0 +1,21 @@
+{
+  "name": "mysqlquery_flogo",
+  "type": "flogo:activity",
+  "ref": "github.com/ultrafab/mysqlquery_flogo",
+  "version": "0.0.1",
+  "title": "MySQL query",
+  "description": "This activity let you to query a MySQL DB",
+  "homepage": "https://github.com/ultrafab/mysqlquery_flogo",
+  "inputs":[
+    {
+          "name": "message",
+          "type": "string"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type": "boolean"
+        }
+      ]
+    }
