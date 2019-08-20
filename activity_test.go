@@ -49,8 +49,8 @@ func TestEval(t *testing.T) {
 	tc := test.NewTestActivityContext(getActivityMetadata())
 
 	m := make(map[string]interface{})
-	m["pressione_perdita"] = "51.6"
-	m["pressione_ingresso"] = "5.1"
+	m["pressione_perdita"] = 51.6
+	m["pressione_ingresso"] = 5.1
 	data, _ := json.Marshal(m)
 	tc.SetInput("message", string(data))
 	tc.SetInput("username", "ukeau")
